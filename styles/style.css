@@ -150,17 +150,21 @@ ol {
 }
 
 /*ТЕМПЛЕЙТЫ*/
-.preloader-template {
 
-}
 
-.preloader {
+/*.preloader {
 
 }
 
 .preloader-chasing-squares {
 
 }
+*/
+.preloader-template {
+
+}
+
+
 
 .square {
 
@@ -209,7 +213,7 @@ ol {
 
 }
 
-.button more-button {
+.more-button {
 
 }
 
