@@ -83,11 +83,49 @@ ol {
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+  padding: 1px;
+}
+
+.search-form__fieldset {
+
+}
+
+.search-form__fieldset-title {
+
+}
+
+.search-form__label {
+
+}
+
+.search-form__label-text visually-hidden {
+  
+}
+
+.search-form__textfield {
+
 }
 
 
+.search-form__checkbox-list {
 
+}
 
+.search-form__checkbox visually-hidden {
+
+}
+
+.search-form__pseudo-checkbox {
+
+}
+
+.search-form__label-text {
+
+}
+
+.button search-form__submit-button {
+
+}
 
 
 
@@ -110,3 +148,80 @@ ol {
 .content__list {
 
 }
+
+/*ТЕМПЛЕЙТЫ*/
+.preloader-template {
+
+}
+
+.preloader {
+
+}
+
+.preloader-chasing-squares {
+
+}
+
+.square {
+
+}
+
+
+.cards-list-item-template {
+
+
+}
+
+.content__list-item {
+
+}
+
+.content__card-link {
+
+}
+
+.content__video-card {
+
+}
+
+.content__video-card-description-container {
+
+}
+
+.content__video-card-title {
+
+}
+
+.content__video-card-description {
+
+}
+
+.content__video-card-thumbnail {
+
+}
+
+.more-button-template {
+
+}
+
+
+.button {
+
+}
+
+.button more-button {
+
+}
+
+.error-template {
+
+}
+
+.error {
+
+}
+
+.error__title {
+
+}
+
