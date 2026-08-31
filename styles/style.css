@@ -19,14 +19,6 @@ html {
   background-color: #1b1919;
 }
 
-.content {
-
-}
-
-.result {
-  
-}
-
 h1,
 h2,
 h3,
@@ -57,4 +49,64 @@ ol {
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
+}
+
+/*big_card*/
+.content {
+  display: flex;
+  flex-direction: row;
+  margin: 133px 30px;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+}
+
+.result__video-container{
+  position: relative;
+  min-inline-size: 711px;
+  padding-block-start: 75px;
+}
+
+.result__video {
+  object-fit: cover;
+  block-size: 386px;
+  inline-size: 100%;
+}
+
+.search-form {
+  display: flex;
+  min-width: 711px;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+/*вывод списка видео*/
+.content__details {
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.content__accent {
+  color: #545050;
+  position: relative;
+}
+
+.content__list-container {
+
+}
+
+.content__list {
+
 }
