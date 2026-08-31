@@ -51,7 +51,7 @@ ol {
   background-color: #D9D9D9;
 }
 
-/*big_card*/
+/*big_card+search*/
 .content {
   display: flex;
   flex-direction: row;
@@ -79,19 +79,32 @@ ol {
 
 .search-form {
   display: flex;
-  min-width: 711px;
+  min-width: 71;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1px;
+  padding-top: 16px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0px;
 }
 
 .search-form__fieldset {
+  border: none;
+  padding-top: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0px;
 
+  
 }
 
 .search-form__fieldset-title {
-
+  
 }
 
 .search-form__label {
@@ -123,10 +136,13 @@ ol {
 
 }
 
-.button search-form__submit-button {
-
+.button {
+  font-weight: bold;
 }
 
+.search-form__submit-button {
+  border: solid 1px #FFFFFF;
+}
 
 
 
@@ -229,3 +245,14 @@ ol {
 
 }
 
+
+/*скрываем элементы*/
+.visually-hidden { 
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
