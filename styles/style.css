@@ -17,7 +17,7 @@ html {
   font-size: 18px;
   background-color: #1b1919;
   border: solid 1px white;
-  align-items: center;
+  align-items: start;
   justify-items: center;
 }
 
@@ -53,7 +53,7 @@ ol {
   background-color: #D9D9D9;
 }
 
-/*big_card+search*/
+/*(big_card+search)+(result)*/
 .content {
   display: flex;
   flex-direction: row;
@@ -86,7 +86,6 @@ ol {
   display: flex;
   min-width: 71px;
   flex-direction: row;
-  
   padding-top: 16px;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -102,22 +101,23 @@ ol {
 .search-form__fieldset {
   border: none;
   padding-top: 16px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
   font-weight: 400;
   font-style: normal;
   line-height: 100%;
   letter-spacing: 0px;
-
+  color: rgba(255, 255, 255, 1)
   
 }
-
+/*Город*/
 .search-form__fieldset-title {
   font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
   line-height: 100%;
   letter-spacing: 0px;
-  color: #fff;
   padding-block-end: 5px;
   }
 
@@ -129,13 +129,14 @@ ol {
 }
 
 .search-form__label-text {
-  font-family: "Fira Sans Condensed", sans-serif;
-  font-weight: 400;
-  line-height: 100%;
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.7);
-
+   border-top: #FFFFFF;
+   border-bottom: #FFFFFF;
 }
+
+.search-form__label-text::plaseholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 
 .search-form__textfield {
   font-family: "Fira Sans Condensed", sans-serif;
@@ -185,6 +186,7 @@ ol {
 /*вывод списка видео*/
 .content__details {
   display: inline-block;
+  inline-size: fit-content;
   max-width: 399px;
   max-height: 534px;
   block-size: 100%;
@@ -196,11 +198,11 @@ ol {
 .content__accent {
   color: #545050;
   position: relative;
-  
 }
 
 .content__list-container {
-
+  max-height: 534px;
+  overflow: normal;
 }
 
 .content__list {
