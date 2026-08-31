@@ -12,7 +12,7 @@ html {
   display: flex;
   inline-size: 1200px;
   block-size: 100%;
-  margin: auto;
+  margin: 0;
   color: #fff;
   font-size: 18px;
   background-color: #1b1919;
@@ -81,7 +81,7 @@ ol {
   block-size: 386px;
   inline-size: 100%;
 }
-
+/*поиск*/
 .search-form {
   display: flex;
   min-width: 71px;
@@ -110,7 +110,7 @@ ol {
   color: rgba(255, 255, 255, 1)
   
 }
-/*Город*/
+/*h2*/
 .search-form__fieldset-title {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -163,15 +163,45 @@ ol {
 }
 
 .search-form__checkbox {
-  
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding-block-start: 4px;
+}
+
+.search-form__checkbox:focus-visible {
+  text-decoration: underline;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  display: block;
+  content: "";
+  inline-size: 15px;
+  block-size: 15px;
+  background-color: #fff;
+  margin: 1px;
+}
+
+.search-form__label:has(.search-form__checkbox:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__pseudo-checkbox {
-
+  cursor: pointer;
+  display: block;
+  inline-size: 19px;
+  block-size: 19px;
+  border: 1px solid #fff;
 }
 
 .search-form__label-text {
+  padding-inline-start: 5px;
+}
 
+.search-form__textfield:active {
+  border: 1px solid #fff;
+  
 }
 
 .button {
@@ -206,7 +236,11 @@ ol {
 }
 
 .content__list {
-
+  position: relative;
+  max-block-size: 298px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none; 
 }
 
 /*ТЕМПЛЕЙТЫ*/
@@ -245,7 +279,9 @@ ol {
 }
 
 .content__video-card {
-
+  object-fit: cover;
+  block-size: 386px;
+  inline-size: 100%;
 }
 
 .content__video-card-description-container {
@@ -261,7 +297,9 @@ ol {
 }
 
 .content__video-card-thumbnail {
-
+  object-fit: cover;
+  block-size: 386px;
+  inline-size: 100%;
 }
 
 .more-button-template {
@@ -270,13 +308,42 @@ ol {
 
 
 .button {
-
+  display: block;
+  cursor: pointer;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0px;
+  padding: 6px 73.5px;
+  align-self: flex-end;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 1);
 }
 
 .more-button {
   width: 100%;
 }
 
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: rgba(84, 80, 80, 1);
+}
+
+.more-button:focus-visible {
+  margin: 2px;
+  padding: 6px 140px;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
 .error-template {
 
 }
