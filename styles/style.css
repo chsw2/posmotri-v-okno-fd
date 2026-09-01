@@ -62,6 +62,7 @@ ol {
   gap: 30px;
   align-items: flex-start;
   justify-items: end;
+  align-items: end;
  
   border: solid 1px white;
 }
@@ -74,6 +75,7 @@ ol {
 .result__video-container {
   min-inline-size: 711px;
   padding-block-start: 78px;
+  padding-block-end: 16px;
 }
 
 .result__video {
@@ -124,8 +126,9 @@ ol {
 .search-form__label {
   display: flex;
   flex-direction: row;
-  inline-size: fit-content;
   align-items: center;
+  inline-size: fit-content;
+  gap: 6.5px;
 }
 
 .search-form__label-text {
@@ -133,12 +136,14 @@ ol {
    border-bottom: #FFFFFF;
 }
 
-.search-form__label-text::plaseholder {
+.search-form__label-text::placeholder {
+  appearance: none;
   color: rgba(255, 255, 255, 0.7);
 }
 
 
 .search-form__textfield {
+  appearance: none;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   line-height: 100%;
@@ -150,10 +155,8 @@ ol {
   border-bottom: 1px solid #fff;
   border-left: none;
   border-right: none;
-  appearance: none;
   cursor: pointer;
 }
-
 
 .search-form__checkbox-list {
   display: flex;
@@ -170,7 +173,7 @@ ol {
 }
 
 .search-form__checkbox:focus-visible {
-  text-decoration: underline;
+  outline: none;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
@@ -199,6 +202,10 @@ ol {
   padding-inline-start: 5px;
 }
 
+.search-form__label-text:hover {
+  text-decoration: underline;
+}
+
 .search-form__textfield:active {
   border: 1px solid #fff;
   
@@ -209,30 +216,46 @@ ol {
 }
 
 .search-form__submit-button {
-  border: solid 1px #FFFFFF;
+  border: solid 1px #FFFFFF;font-style: normal;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0px;
 }
 
 
 /*вывод списка видео*/
 .content__details {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   inline-size: fit-content;
   max-width: 399px;
   max-height: 534px;
   block-size: 100%;
   inline-size: 100%;
-  
   border: solid 1px rgb(112, 233, 14);
 }
 
+.title {
+  font-family: "Oswald";
+  font-weight: 700;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
 .content__accent {
-  color: #545050;
   position: relative;
+  color: #545050;
 }
 
 .content__list-container {
-  max-height: 534px;
+  max-height: 298px;
   overflow: normal;
+  gap: 30px;
+  
 }
 
 .content__list {
@@ -241,11 +264,12 @@ ol {
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: none; 
+  gap: 30px;
 }
 
 /*ТЕМПЛЕЙТЫ*/
 
-
+/*preloader.css*/
 /*.preloader {
 
 }
@@ -255,7 +279,7 @@ ol {
 }
 */
 .preloader-template {
-
+  
 }
 
 
@@ -275,31 +299,57 @@ ol {
 }
 
 .content__card-link {
+font-family: "Fira Sans Condensed", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 18px;
+line-height: 16.2px;
+letter-spacing: 0px;
+color: rgba(255, 255, 255, 1);
+text-decoration: none;
 
 }
 
 .content__video-card {
+  display: inline-block;
   object-fit: cover;
-  block-size: 386px;
+  block-size: 194px;
   inline-size: 100%;
 }
 
 .content__video-card-description-container {
-
+  flex-grow: 10;
 }
 
-.content__video-card-title {
 
+.content__video-card-title {
+  font-family: "Oswald";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  color:rgba(255, 255, 255, 1);
+  text-overflow: ellipsis;
 }
 
 .content__video-card-description {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: none;
+  color:rgba(255, 255, 255, 1);
+  line-clamp: 1;
 
 }
 
 .content__video-card-thumbnail {
   object-fit: cover;
-  block-size: 386px;
-  inline-size: 100%;
+  object-position: right;
 }
 
 .more-button-template {
@@ -345,7 +395,7 @@ ol {
   outline-offset: 1px;
 }
 .error-template {
-
+  
 }
 
 .error {
