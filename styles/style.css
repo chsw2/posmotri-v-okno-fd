@@ -10,6 +10,8 @@ html {
 }
 
 .page {
+  display: flex;
+  flex-direction: column;
   inline-size: 1200px;
   block-size: 100%;
   margin: 0;
@@ -258,12 +260,11 @@ ol {
 /*вывод списка видео*/
 .content__details {
   display: grid;
-  grid-auto-rows: min-content;
-  flex-direction: column;
+  
   align-content: end;
   justify-content: end;
   margin: 0;
-  padding: 0;
+  padding-bottom: 30px;
   min-inline-size: 399px;
   min-block-size: 534px;
   block-size: 100%;
@@ -299,7 +300,6 @@ ol {
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: none; 
-  gap: 30px;
 }
 
 /*ТЕМПЛЕЙТЫ*/
@@ -315,7 +315,7 @@ ol {
 */
 .preloader-template {
 
-display: flex;
+display: inline-block;
 align-items: center;
 justify-content: center;
 }
@@ -323,17 +323,25 @@ justify-content: center;
 
 
 .square {
-
+display: inline-block;
+align-items: center;
+justify-content: center;
 }
 
 
 .cards-list-item-template {
-
+display: inline-block;
+align-items: center;
+justify-content: center;
 
 }
 
 .content__list-item {
-
+display: inline-block;
+margin:0;
+padding: 0;
+align-items: center;
+justify-content: center;
 }
 
 .content__list-item:not(:last-child) {
@@ -370,17 +378,16 @@ background-color: rgba(84, 80, 80, 1);
 
 .content__video-card {
   display: grid;
-  grid-template-columns: 1fr , 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-items: end;
   align-items: flex-start;
 }
 
 .content__video-card-description-container {
-  flex-grow: 10;
+  flex-grow: 100%;
 }
 
 .content__video-card-title {
-  display: flex;
   font-family: "Oswald";
   font-weight: 700;
   font-style: normal;
@@ -388,12 +395,13 @@ background-color: rgba(84, 80, 80, 1);
   line-height: 100%;
   letter-spacing: 0px;
   text-transform: uppercase;
+  text-decoration: none;
+  list-style-type: none;
   color:rgba(255, 255, 255, 1);
   text-overflow: ellipsis;
 }
 
 .content__video-card-description {
-  
   font-family: "Oswald";
   font-weight: 400;
   font-style: normal;
@@ -401,13 +409,14 @@ background-color: rgba(84, 80, 80, 1);
   line-height: 100%;
   letter-spacing: 0px;
   text-transform: none;
+  text-decoration: none;
+  list-style-type: none;
   color:rgba(255, 255, 255, 1);
   line-clamp: 1;
 
 }
 
 .content__video-card-thumbnail {
-  display: block;
   justify-self: end;
   inline-size: 194px;
   block-size: 103px;
