@@ -290,7 +290,7 @@ ol {
 
 .content__list-container {
   max-block-size: 298px;
-  overflow: scroll;
+  overflow: visible;
   gap: 30px;
   
 }
@@ -381,17 +381,13 @@ background-color: rgba(84, 80, 80, 1);
   grid-template-columns: 1fr 1fr;
   justify-items: end;
   align-items: flex-start;
-  left: auto;
 }
 
 .content__video-card-description-container {
   flex-grow: 100%;
-  align-items: self-start;
-  justify-items: auto;
 }
 
 .content__video-card-title {
-
   font-family: "Oswald";
   font-weight: 700;
   font-style: normal;
@@ -399,12 +395,10 @@ background-color: rgba(84, 80, 80, 1);
   line-height: 100%;
   letter-spacing: 0px;
   text-transform: uppercase;
-  text-overflow: ellipsis;
   text-decoration: none;
   list-style-type: none;
   color:rgba(255, 255, 255, 1);
   text-overflow: ellipsis;
-  padding-block-end: 6px;
 }
 
 .content__video-card-description {
@@ -418,7 +412,7 @@ background-color: rgba(84, 80, 80, 1);
   text-decoration: none;
   list-style-type: none;
   color:rgba(255, 255, 255, 1);
-  
+  line-clamp: 1;
 
 }
 
