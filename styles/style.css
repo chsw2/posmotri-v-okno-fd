@@ -11,15 +11,16 @@ html {
 
 .page {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   inline-size: 1200px;
   block-size: 100%;
-  margin: 0;
+  margin: auto;
   align-items: start;
-  justify-items: center;
+  justify-content: center;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   color: #fff;
+  background-color: rgba (27, 25, 25, 1);
   border: solid 1px white;
 };
 
@@ -63,39 +64,35 @@ ol {
   margin: 133px 30px;
   padding: 0px;
   gap: 30px;
-  align-items: flex-end;
-  justify-items: flex-start;
+  align-items: end;
   border: solid 1px white;
 }
 
 .result {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
+  gap: 15px;
 }
 
 .result__video-container {
-  min-inline-size: 711px;
-  padding-block-start: 78px;
-  padding-block-end: 16px;
-  
+  position: relative;
+  inline-size: 711px;
+  block-size: 386px;  
 }
 
 .result__video {
-  object-fit: cover;
-  block-size: 386px;
   inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /*поиск*/
 .search-form {
   display: flex;
-  flex-direction: row;
   max-inline-size: 711px;
   max-block-size: fit-content;
-  justify-items: flex-start;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: start;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -103,11 +100,11 @@ ol {
   line-height: 100%;
   letter-spacing: 0px;
   gap: 40px;
-  margin: 0;
-  /*padding-block-start: 10px;*/
 }
 
 .search-form__fieldset {
+  display: flex;
+  flex-direction: column;
   border: none;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -116,8 +113,8 @@ ol {
   line-height: 100%;
   letter-spacing: 0px;
   color: rgba(255, 255, 255, 1);
-  margin: 0;
-  padding: 0;
+  gap: 15px;
+
   /*border: 1px solid rgb(112, 233, 14);*/
 }
 
@@ -130,7 +127,7 @@ ol {
   letter-spacing: 0px;
   color: rgba(255, 255, 255, 1);
   margin: 0;
-  padding: 4px;;
+  padding: 0;
   }
 
   .search-form__label {
