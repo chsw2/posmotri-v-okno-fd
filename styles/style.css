@@ -147,7 +147,6 @@ ol {
 
   .search-form__label:has(.search-form__textfield:focus-visible) {
   outline: 1px solid #fff;
-  border-radius: 16px;
   outline-offset: 1px;
 }
 
@@ -156,7 +155,7 @@ ol {
   padding-left: 5px;
 }
 
-.search-form__label-text .visually-hidden {
+.search-form__label-text + .visually-hidden {
   user-select: none;
 }
 
@@ -171,29 +170,32 @@ ol {
   font-size: 18px;
   color: #fff;
   background-color: transparent;
-  border-block-start: 1px solid #fff;
-  border-block-end: 1px solid #fff;
-  border-inline-start: 1px solid #fff;
-  border-inline-end: 1px solid #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-left: none;
+  border-right: none;
   cursor: pointer;
+  padding-bottom: 2px;
+}
+
+.search-form__textfield:focus-visible {
+  appearance: none;
+  outline: 1px solid #fff;
+}
+
+.search-form__textfield:hover {
+  cursor: text;
 }
 
 .search-form__textfield::placeholder {
   color: rgba(255, 255, 255, 0.7);
-  content: "";
 }
 
-.search-form__textfield::placeholder:focus-visible {
-  outline: none;
-  content: "";
-}
-
-.search-form__textfield::placeholder:active {
+.search-form__textfield::placeholder:focus-visible + .visually-hidden {
   appearance: none;
-  border: 1px solid #fff;
+  outline:none;
   content: "";
 }
-
 
 /*чекбоксы*/
 .search-form__checkbox-list {
@@ -247,30 +249,58 @@ ol {
 }
 
 /*кнопка Найти*/
-
-.search-form__submit-button {
+.button {
+  display: flex;
   inline-size: 194px;
   block-size: 34px;
-  justify-self: start;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: inherit;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: inherit;
   font-style: normal;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 18px;
   line-height: 100%;
   letter-spacing: 0px;
+  text-align: center;
+  cursor: pointer;
   margin: 0;
   padding: 6px 73.5px;
-  outline: solid 1px #FFFFFF;
-  /*border: solid 1px #FFFFFF;*/
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:focus-visible {
+  outline: 1px solid #FFFFFF;
+  outline-offset: -2px;
+}
+
+
+.search-form__submit-button {
+  align-content: end;
+}
+
+.search-form__submit-button:focus-visible {
+  /*outline: 1px solid #FFFFFF;
+  outline-offset: -20px;*/
 }
 
 .search-form__submit-button:active {
   background-color: rgba(84, 80, 80, 1);
 }
 
+.search-form__submit-button:hover:not(.search-form__label:has(.search-form__textfield)), .button:hover {
+  text-decoration: underline;
+}
+
 /*вывод списка видео*/
 .content__details {
   display: grid;
-  
   align-content: end;
   justify-content: end;
   margin: 0;
