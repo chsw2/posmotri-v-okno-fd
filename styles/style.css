@@ -24,7 +24,6 @@ html {
   border: solid 1px white;
 };
 
-
 h1,
 h2,
 h3,
@@ -64,7 +63,7 @@ ol {
   margin: 133px 30px;
   padding: 0px;
   align-items: end;
-  border: solid 1px white;
+  /*border: solid 1px white;*/
 }
 
 .result {
@@ -90,7 +89,7 @@ ol {
 .search-form {
   display: flex;
   max-inline-size: 711px;
-  max-block-size: fit-content;
+  max-inline-size: 386px;
   justify-content: space-between;
   align-items: start;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -99,6 +98,7 @@ ol {
   font-style: normal;
   line-height: 100%;
   letter-spacing: 0px;
+  gap: 40px;
 }
 
 .search-form:last-child {
@@ -152,7 +152,7 @@ ol {
 
 .search-form__label-text{ 
   border: #FFFFFF;
-  padding-left: 5px;
+  padding-inline-start: 5px;
 }
 
 .search-form__label-text + .visually-hidden {
@@ -170,12 +170,12 @@ ol {
   font-size: 18px;
   color: #fff;
   background-color: transparent;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  border-left: none;
-  border-right: none;
+  border-block-start: 1px solid #fff;
+  border-block-end: 1px solid #fff;
+  border-inline-start: none;
+  border-inline-end: none;
   cursor: pointer;
-  padding-bottom: 2px;
+  padding-block-end: 2px;
 }
 
 .search-form__textfield:focus-visible {
@@ -251,14 +251,14 @@ ol {
 /*кнопка Найти*/
 .button {
   display: flex;
-  inline-size: 194px;
-  block-size: 34px;
+  /*inline-size: 194px;*/
+  /*block-size: 34px;*/
   border: 1px solid #fff;
   background-color: transparent;
   color: inherit;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  /*gap: 10px;*/
   font-family: inherit;
   font-style: normal;
   font-weight: 700;
@@ -275,10 +275,12 @@ ol {
   text-decoration: underline;
 }
 
+
 .button:focus-visible {
   outline: 1px solid #FFFFFF;
-  outline-offset: -2px;
-}
+  outline-offset: 1px;
+  background-color: transparent;
+}           
 
 
 .search-form__submit-button {
@@ -286,8 +288,8 @@ ol {
 }
 
 .search-form__submit-button:focus-visible {
-  /*outline: 1px solid #FFFFFF;
-  outline-offset: -20px;*/
+  outline: 1px solid #FFFFFF;
+  outline-offset: 1px;
 }
 
 .search-form__submit-button:active {
@@ -300,20 +302,22 @@ ol {
 
 /*вывод списка видео*/
 .content__details {
+  block-size: 100%;
+  inline-size: 100%;
   display: grid;
   align-content: end;
   justify-content: end;
   margin: 0;
-  padding-bottom: 30px;
+  padding-block-end: 30px;
   min-inline-size: 399px;
   min-block-size: 534px;
   block-size: 100%;
   inline-size: 100%;
-  border: solid 1px rgb(112, 233, 14);
+  /*border: solid 1px rgb(112, 233, 14);*/
 }
 
 .title {
- 
+
   font-family: "Oswald";
   font-weight: 700;
   font-style: normal;
@@ -354,7 +358,6 @@ ol {
 }
 */
 .preloader-template {
-
 display: inline-block;
 align-items: center;
 justify-content: center;
@@ -452,14 +455,14 @@ background-color: rgba(84, 80, 80, 1);
   text-decoration: none;
   list-style-type: none;
   color:rgba(255, 255, 255, 1);
-  line-clamp: 1;
 
 }
 
 .content__video-card-thumbnail {
+  display: block;
+  block-size: 103px;
   justify-self: end;
   inline-size: 194px;
-  block-size: 103px;
 }
 
 .more-button-template {
