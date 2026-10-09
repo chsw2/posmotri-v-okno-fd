@@ -479,6 +479,7 @@ background-color: rgba(84, 80, 80, 1);
 
 
 .button {
+  appearance: none;
   display: block;
   cursor: pointer;
   font-family: 'Fira Sans Condensed', sans-serif;
