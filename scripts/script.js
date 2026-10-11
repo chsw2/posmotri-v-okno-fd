@@ -1,7 +1,7 @@
 /* КОНФИГ */
 const preloaderWaitindTime = 1200;
 const cardsOnPage = 5;
-const BASE_URL = 'https://v-content.practicum-team.ru';
+const BASE_URL = 'https://786f186c-eea2-4863-a6e9-cd15c13cb811.mdnplay.dev';
 const endpoint = `${BASE_URL}/api/videos?pagination[pageSize]=${cardsOnPage}&`;
 
 /* ЭЛЕМЕНТЫ СТРАНИЦЫ */
@@ -59,7 +59,126 @@ form.onsubmit = (e) => {
 
 async function mainMechanics(endpoint) {
   try {
-    const data = await (await fetch(endpoint)).json();
+    const data = {
+    "results": [
+        {
+            "id": 32,
+            "description": "ночной Белгород",
+            "time_of_day": "night",
+            "createdAt": "2023-05-12T16:08:08.795Z",
+            "updatedAt": "2023-05-12T16:33:50.064Z",
+            "city": "Белгород",
+            "video": {
+                "id": 145,
+                "url": "/shared-assets/videos/flower.mp4"
+            },
+            "poster": {
+                "id": 125,
+                "url": "/uploads/Belgorod_Noch_mp4_poster_b593de63bb.png",
+                "previewUrl": "/uploads/thumbnail_Belgorod_Noch_mp4_poster_b593de63bb.png"
+            },
+            "thumbnail": {
+                "id": 132,
+                "url": "https://avatars.mds.yandex.net/i?id=050817af1cf91a5eebadc384d02ea2cd_sr-7086355-images-thumbs&n=13",
+                "previewUrl": "/uploads/thumbnail_Belgorod_Noch_mp4_thumb_8e63aba026.png"
+            }
+        },
+        {
+            "id": 33,
+            "description": "Адлер утром",
+            "time_of_day": "morning",
+            "createdAt": "2023-05-12T16:10:48.000Z",
+            "updatedAt": "2023-05-12T16:35:20.705Z",
+            "city": "Адлер",
+            "video": {
+                "id": 143,
+                "url": "/shared-assets/videos/flower.mp4"
+            },
+            "poster": {
+                "id": 124,
+                "url": "/uploads/Adler_Utro_mp4_poster_e4d1e4fe6d.png",
+                "previewUrl": "/uploads/thumbnail_Adler_Utro_mp4_poster_e4d1e4fe6d.png"
+            },
+            "thumbnail": {
+                "id": 139,
+                "url": "https://avatars.mds.yandex.net/i?id=050817af1cf91a5eebadc384d02ea2cd_sr-7086355-images-thumbs&n=13",
+                "previewUrl": "/uploads/thumbnail_Adler_Utro_mp4_thumb_aa34fe8f1a.png"
+            }
+        },
+        {
+            "id": 34,
+            "description": "Воронеж днем",
+            "time_of_day": "afternoon",
+            "createdAt": "2023-05-12T16:18:31.978Z",
+            "updatedAt": "2023-05-12T16:36:22.215Z",
+            "city": "Воронеж",
+            "video": {
+                "id": 141,
+                "url": "/shared-assets/videos/flower.mp4"
+            },
+            "poster": {
+                "id": 116,
+                "url": "https://avatars.mds.yandex.net/i?id=050817af1cf91a5eebadc384d02ea2cd_sr-7086355-images-thumbs&n=13",
+                "previewUrl": "/uploads/thumbnail_Voronezh_Den_mp4_poster_bea3eae723.png"
+            },
+            "thumbnail": {
+                "id": 128,
+                "url": "https://avatars.mds.yandex.net/i?id=050817af1cf91a5eebadc384d02ea2cd_sr-7086355-images-thumbs&n=13",
+                "previewUrl": "/uploads/thumbnail_Voronezh_Den_mp4_thumb_f15c5913ca.png"
+            }
+        },
+        {
+            "id": 35,
+            "description": "Утро в Дубае",
+            "time_of_day": "morning",
+            "createdAt": "2023-05-12T16:23:18.668Z",
+            "updatedAt": "2023-05-12T16:37:24.379Z",
+            "city": "Дубай",
+            "video": {
+                "id": 150,
+                "url": "/shared-assets/videos/flower.mp4"
+            },
+            "poster": {
+                "id": 119,
+                "url": "https://avatars.mds.yandex.net/i?id=050817af1cf91a5eebadc384d02ea2cd_sr-7086355-images-thumbs&n=13",
+                "previewUrl": "/uploads/thumbnail_Dubaj_Utro_mp4_poster_cdb5da5635.png"
+            },
+            "thumbnail": {
+                "id": 135,
+                "url": "https://avatars.mds.yandex.net/i?id=050817af1cf91a5eebadc384d02ea2cd_sr-7086355-images-thumbs&n=13",
+                "previewUrl": "/uploads/thumbnail_Dubaj_Utro_mp4_thumb_531e868753.png"
+            }
+        },
+        {
+            "id": 36,
+            "description": "Дневной Зеленоградск",
+            "time_of_day": "afternoon",
+            "createdAt": "2023-05-12T16:25:46.303Z",
+            "updatedAt": "2023-05-12T16:38:08.675Z",
+            "city": "Зеленоградск",
+            "video": {
+                "id": 140,
+                "url": "/shared-assets/videos/flower.mp4"
+            },
+            "poster": {
+                "id": 121,
+                "url": "/uploads/Zelenogradsk_Den_mp4_poster_d2929523b7.png",
+                "previewUrl": "/uploads/thumbnail_Zelenogradsk_Den_mp4_poster_d2929523b7.png"
+            },
+            "thumbnail": {
+                "id": 138,
+                "url": "https://avatars.mds.yandex.net/i?id=050817af1cf91a5eebadc384d02ea2cd_sr-7086355-images-thumbs&n=13",
+                "previewUrl": "/uploads/thumbnail_Zelenogradsk_Den_mp4_thumb_308d520d6c.png"
+            }
+        }
+    ],
+    "pagination": {
+        "page": 1,
+        "pageSize": 5,
+        "pageCount": 3,
+        "total": 11
+    }
+};
     cardsOnPageState = data.results;
 
     if (!data?.results?.[0]) {
@@ -140,6 +259,9 @@ async function waitForReadyVideo(video) {
 // Устанавливает прелоадер на время загрузки данных ✅
 function showPreloader(tmp, parent) {
   const node = tmp.content.cloneNode(true);
+  if (parent === cardsContainer) {
+  document.querySelector(".content__list").style.display = 'none';
+  }
   parent.append(node);
   console.log('показал прелоадер');
 }
@@ -149,6 +271,7 @@ function removePreloader(parent, preloaderSelector) {
   const preloader = parent.querySelector(preloaderSelector);
   if (preloader) {
     preloader.remove();
+	document.querySelector(".content__list").removeAttribute("style");
   }
 
   console.log('убрал прелоадер');
@@ -164,7 +287,7 @@ function appendCards({ baseUrl, dataArray, cardTmp, container }) {
       el.description;
     node
       .querySelector('.content__video-card-thumbnail')
-      .setAttribute('src', `${baseUrl}${el.thumbnail.url}`);
+      .setAttribute('src', `${el.thumbnail.url}`);
     node
       .querySelector('.content__video-card-thumbnail')
       .setAttribute('alt', el.description);
@@ -176,7 +299,7 @@ function appendCards({ baseUrl, dataArray, cardTmp, container }) {
 // Устанавливет внужное видео в контейнер ✅
 function setVideo({ baseUrl, video, videoUrl, posterUrl }) {
   video.setAttribute('src', `${baseUrl}${videoUrl}`);
-  video.setAttribute('poster', `${baseUrl}${posterUrl}`);
+  //video.setAttribute('poster', `${baseUrl}${posterUrl}`);
   console.log('Подставил видео в основной блок');
 }
 
