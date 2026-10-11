@@ -13,6 +13,7 @@ html {
   display: flex;
   flex-direction: row;
   inline-size: 1200px;
+  max-height: 800px;
   block-size: 100%;
   margin: auto;
   align-items: start;
@@ -21,7 +22,7 @@ html {
   font-size: 18px;
   color: #fff;
   background-color: rgba (27, 25, 25, 1);
-  border: solid 1px white;
+  border: double 1px white;
 };
 
 h1,
@@ -61,9 +62,12 @@ ol {
   display: flex;
   flex-direction: row;
   margin: 133px 30px;
-  padding: 0px;
-  align-items: end;
-  gap:30px;
+  padding-block-start: 0px;
+  align-items: center;
+  justify-items: center;
+  padding: 76px 2px 70px 0px;
+  gap: 30px;
+  max-block-size: 534px;
   /*border: solid 1px white;*/
 }
 
@@ -71,6 +75,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  max-block-size: 456px;
 }
 
 .result__video-container {
@@ -100,6 +105,8 @@ ol {
   line-height: 100%;
   letter-spacing: 0px;
   gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .search-form:last-child {
@@ -142,7 +149,6 @@ ol {
   flex-direction: row;
   align-items: center;
   inline-size: fit-content;
-  /*gap: 6.5px;*/
   gap: 5px;
   cursor: pointer;
 }
@@ -166,7 +172,7 @@ ol {
   min-inline-size: 225px;
   block-size: 27px;
   align-items: center;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   line-height: 100%;
   font-size: 18px;
@@ -250,8 +256,8 @@ ol {
   outline-offset: 1px;
 }
 
-/*кнопка Найти*/
-  .button {
+/*кнопка Найти (2шт)*/
+.button {
   display: flex;
   inline-size: 100%;
   block-size: 34px;
@@ -313,7 +319,7 @@ ol {
   display: grid;
   align-content: end;
   justify-content: end;
-  margin: 0;
+  margin: 0px 0px;
   padding-block-end: 30px;
   min-inline-size: 399px;
   min-block-size: 534px;
@@ -323,6 +329,8 @@ ol {
 }
 
 .title {
+  margin-block-start: 0px;
+  padding-block-start: 0px;
   font-family: 'Oswald';
   font-weight: 700;
   font-style: normal;
@@ -345,6 +353,8 @@ ol {
 }
 
 .content__list {
+  margin: 0px;
+  padding: 0px;
   max-block-size: 298px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -364,62 +374,62 @@ ol {
 */
 
 .preloader-template {
-display: inline-block;
-align-items: center;
-justify-content: center;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
 }
 
 .square {
-display: inline-block;
-align-items: center;
-justify-content: center;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
 }
 
 .cards-list-item-template {
-display: inline-block;
-align-items: center;
-justify-content: center;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
 
 }
 
 .content__list-item {
-display: inline-block;
-margin:0;
-padding: 0;
-align-items: center;
-justify-content: center;
+  display: inline-block;
+  margin:0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .content__list-item:not(:last-child) {
-padding-block-end: 32px;
+  padding-block-end: 32px;
 }
 
 .content__card-link {
-display: block;
-align-content: flex-start;
-justify-content: flex-start;
-font-family: 'Fira Sans Condensed', sans-serif;
-font-weight: 400;
-font-style: normal;
-font-size: 18px;
-line-height: 16.2px;
-letter-spacing: 0px;
-color: rgba(255, 255, 255, 1);
-text-decoration: none;
+  display: block;
+  align-content: flex-start;
+  justify-content: flex-start;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 16.2px;
+  letter-spacing: 0px;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
 }
 
 .content__card-link:focus-visible {
-margin: 2px;  
-outline: 1px solid #fff;
-outline-offset: 1px;
+  margin: 2px;  
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .content__card-link:hover {
-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .content__card-link:active {
-background-color: rgba(84, 80, 80, 1);
+  background-color: rgba(84, 80, 80, 1);
 }
 
 .content__video-card {
@@ -427,10 +437,13 @@ background-color: rgba(84, 80, 80, 1);
   grid-template-columns: 1fr 1fr;
   justify-items: end;
   align-items: flex-start;
+  justify-items: flex-start;
+  gap: 30px;
 }
 
 .content__video-card-description-container {
-  flex-grow: 100%;
+  flex-grow: 1;
+  text-align: start;
 }
 
 .content__video-card-title {
@@ -448,15 +461,12 @@ background-color: rgba(84, 80, 80, 1);
 }
 
 .content__video-card-description {
-  font-family: 'Oswald';
+  font-family: 'Fira Sans Condensed' sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 30px;
-  line-height: 100%;
-  letter-spacing: 0px;
-  text-transform: none;
-  text-decoration: none;
-  list-style-type: none;
+  font-size: 18px;
+  line-height: 16.2px;
+  letter-spacing: 0%;
   color:rgba(255, 255, 255, 1);
 }
 
@@ -472,9 +482,9 @@ background-color: rgba(84, 80, 80, 1);
 }
 
 .error-template {
-  font-family: "Oswald";
+  font-family: 'Oswald';
   font-weight: 700;
-  font-style: Bold;
+  font-style: normal;
   font-size: 30px;
   line-height: 110.00000000000001%;
   letter-spacing: 0%;
