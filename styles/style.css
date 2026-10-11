@@ -76,7 +76,7 @@ ol {
   flex-direction: column;
   gap: 16px;
   min-block-size: 456px;
-  padding-top: 75px;
+  padding-block-start: 75px;
 }
 
 .result__video-container {
@@ -316,14 +316,14 @@ ol {
 /*вывод списка видео*/
 .content__details {
   block-size: 100%;
-  inline-size: 100%;
   display: grid;
+  grid-template-rows: min-content;
   align-content: end;
   justify-content: end;
   margin: 0px 0px 00px 0px;
   padding-block-end: 0px;
   row-gap: 30px;
-  min-inline-size: 399px;
+  max-inline-size: 399px;
   min-block-size: 534px;
   
   /*outline: solid 1px rgb(112, 233, 14);*/
@@ -346,7 +346,7 @@ ol {
   color: rgba(84, 80, 80, 1);
 }
 
-.content__list-container {
+.content__list-container + .custom-scrollbar {
   max-block-size: 298px;
   overflow: visible;
   gap: 30px;
@@ -407,7 +407,7 @@ ol {
 }
 
 .content__card-link {
-  display: flex;
+  display: block;
   align-content: flex-start;
   justify-content: flex-start;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -437,19 +437,28 @@ ol {
 .content__video-card {
   display: grid;
   max-block-size: 103px;
+  min-inline-size: 390px;
   grid-template-columns: 1fr 1fr;
-  justify-items: flex-start;
-  align-items: flex-end;
-  gap: 30px;
+  justify-items: start;
+  align-items: start;
+  
 }
 
 .content__video-card-description-container {
-  align-items: flex-end;
+  display: block;
+  object-fit: cover;
+  align-items: start;
+  justify-items: start;
   margin: 0;
   padding: 0;
 }
 
 .content__video-card-title {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: start;
+  justify-self: start;
+  flex-wrap: wrap;
   text-align: start;
   font-family: 'Oswald';
   font-weight: 700;
@@ -458,7 +467,6 @@ ol {
   line-height: 100%;
   letter-spacing: 0px;
   text-transform: uppercase;
-  white-space: nowrap;
   text-decoration: none;
   list-style-type: none;
   color:rgba(255, 255, 255, 1);
@@ -466,6 +474,10 @@ ol {
 }
 
 .content__video-card-description {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: start;
   font-family: 'Fira Sans Condensed' sans-serif;
   font-weight: 400;
   font-style: normal;
