@@ -251,9 +251,9 @@ ol {
 }
 
 /*кнопка Найти*/
-.button {
+  .button {
   display: flex;
-  inline-size: 194px;
+  inline-size: 100%;
   block-size: 34px;
   border: 1px solid #fff;
   background-color: transparent;
@@ -276,16 +276,14 @@ ol {
   text-decoration: underline;
 }
 
-/*.button:focus {
+.button:focus {
   outline: none;
 }
 
-
 .button:focus-visible {
-  outline: 1px solid #FFFFFF;
-  outline-offset: 4px;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
-*/
 
 .search-form__submit-button {
   align-content: end;
@@ -294,7 +292,6 @@ ol {
 .search-form__submit-button:focus{
   outline: none;
 }
-
 
 .search-form__submit-button:focus-visible {
   outline: 1px solid #FFFFFF;
@@ -305,9 +302,9 @@ ol {
   background-color: rgba(84, 80, 80, 1);
 }
 
-/*.search-form__submit-button:hover:not(.search-form__label:has(.search-form__textfield)), .button:hover {
+.search-form__submit-button:hover:not(.search-form__label:has(.search-form__textfield)), .button:hover {
   text-decoration: underline;
-}*/
+}
 
 /*вывод списка видео*/
 .content__details {
@@ -365,20 +362,18 @@ ol {
 
 }
 */
+
 .preloader-template {
 display: inline-block;
 align-items: center;
 justify-content: center;
 }
 
-
-
 .square {
 display: inline-block;
 align-items: center;
 justify-content: center;
 }
-
 
 .cards-list-item-template {
 display: inline-block;
@@ -463,7 +458,6 @@ background-color: rgba(84, 80, 80, 1);
   text-decoration: none;
   list-style-type: none;
   color:rgba(255, 255, 255, 1);
-
 }
 
 .content__video-card-thumbnail {
@@ -477,47 +471,17 @@ background-color: rgba(84, 80, 80, 1);
   inline-size: 100%;
 }
 
-
-.button {
-  appearance: none;
-  display: block;
-  cursor: pointer;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  color: rgba(255, 255, 255, 1);
-  font-weight: 700;
-  line-height: 100%;
-  letter-spacing: 0px;
-  padding: 6px 73.5px;
-  align-self: flex-end;
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 1);
-}
-
-.more-button {
-  inline-size: 100%;
-}
-
-.button:focus {
-  outline: none;
-}
-
-.button:hover {
-  text-decoration: underline;
-}
-
-.button:active {
-  background-color: rgba(84, 80, 80, 1);
-}
-
-.more-button:focus-visible {
-  margin: 2px;
-  padding: 6px 140px;
-  outline: 1px solid #fff;
-  outline-offset: 1px;
-}
 .error-template {
-  
+  font-family: "Oswald";
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 30px;
+  line-height: 110.00000000000001%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  background-color: black;
 }
 
 /* error.css
