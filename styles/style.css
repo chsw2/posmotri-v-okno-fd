@@ -50,12 +50,18 @@ ol {
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: rgb(217 217 217 / 10%);
+  /*background: rgb(217 217 217 / 10%);
+}*/
+background: rgba(239, 12, 12, 0.919);
 }
-
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
 }
+
+.custom-scrollbar::-webkit-scrollbar-button {
+  background-color: transparent;
+}
+
 
 /*(big_card+search)+(result)*/
 .content {
@@ -75,7 +81,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  min-block-size: 456px;
+  max-block-size: 456px;
   padding-block-start: 75px;
 }
 
@@ -317,49 +323,56 @@ ol {
 .content__details {
   block-size: 100%;
   display: grid;
-  grid-template-rows: min-content;
+  grid-template-rows: 1fr;
+  
   align-content: end;
   justify-content: end;
   margin: 0px 0px 00px 0px;
-  padding-block-end: 0px;
-  row-gap: 30px;
+  
   max-inline-size: 399px;
-  min-block-size: 534px;
+  max-block-size: 100%;
+  
+  padding-inline-end: 5px;
   
   /*outline: solid 1px rgb(112, 233, 14);*/
 }
 
 .title {
-  margin-block-start: 0px;
-  padding-block-start: 0px;
+  display: inline-block;
+  margin-top: 0px;
+  padding-left: 0px;
   font-family: 'Oswald';
   font-weight: 700;
   font-style: normal;
-  font-weight: 700;
   font-size: 75px;
   line-height: 94%;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
   text-transform: uppercase;
+  justify-self: start;
+  align-self: start;
+  max-width: 100%;
 }
 
 .content__accent {
   color: rgba(84, 80, 80, 1);
 }
 
-.content__list-container + .custom-scrollbar {
+.content__list-container + 
+.custom-scrollbar::-webkit-scrollbar +
+.custom-scrollbar::-webkit-scrollbar-track +
+.custom-scrollbar::-webkit-scrollbar-thumb +
+.custom-scrollbar::-webkit-scrollbar-button {
   max-block-size: 298px;
-  overflow: visible;
-  gap: 30px;
-  
+  overflow: scroll;
 }
 
 .content__list {
   margin: 0px;
   padding: 0px;
-  max-block-size: 298px;
+  block-size: 298px;
+  inline-size: 399px;
   overflow-y: auto;
   overflow-x: hidden;
-  scrollbar-width: auto; 
 }
 
 /*ТЕМПЛЕЙТЫ*/
@@ -436,6 +449,7 @@ ol {
 
 .content__video-card {
   display: grid;
+  grid-template-rows: max-content;
   max-block-size: 103px;
   min-inline-size: 390px;
   grid-template-columns: 1fr 1fr;
@@ -495,6 +509,10 @@ ol {
 }
 
 .more-button-template {
+  inline-size: 100%;
+}
+
+.more-button-template +  .visually-hidden {
   inline-size: 100%;
 }
 
