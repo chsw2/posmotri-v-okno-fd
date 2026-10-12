@@ -18,7 +18,7 @@ html {
   padding: 0px;
   align-items: center;
   justify-content: center;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   color: #fff;
   background-color: rgba (27, 25, 25, 1);
@@ -50,17 +50,22 @@ ol {
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  /*background: rgb(217 217 217 / 10%);
-}*/
-background: rgba(239, 12, 12, 0.919);
+  background: rgb(217 217 217 / 10%);
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
 }
 
+/*
 .custom-scrollbar::-webkit-scrollbar-button {
-  background-color: transparent;
-}
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap; 
+}*/
 
 
 /*(big_card+search)+(result)*/
@@ -69,7 +74,7 @@ background: rgba(239, 12, 12, 0.919);
   flex-direction: row;
   margin: 133px 30px;
   padding-block-start: 0px;
-  align-content: space-between;
+  align-content: flex-end;
   justify-content: space-between;
   /*padding: 76px 2px 70px 0px;*/
   gap: 28px;
@@ -105,7 +110,7 @@ background: rgba(239, 12, 12, 0.919);
   max-block-size: 386px;
   justify-content: space-between;
   align-items: start;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
@@ -125,7 +130,7 @@ background: rgba(239, 12, 12, 0.919);
   flex-direction: column;
   align-items: start;
   border: none;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
@@ -139,7 +144,7 @@ background: rgba(239, 12, 12, 0.919);
 }
 
 .search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
@@ -178,7 +183,7 @@ background: rgba(239, 12, 12, 0.919);
   min-inline-size: 225px;
   block-size: 27px;
   align-items: center;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   line-height: 100%;
   font-size: 18px;
@@ -322,48 +327,39 @@ background: rgba(239, 12, 12, 0.919);
 /*вывод списка видео*/
 .content__details {
   block-size: 100%;
-  display: grid;
-  grid-template-rows: 1fr;
-  
+  display: flex;
+  flex-direction: column;
   align-content: end;
   justify-content: end;
-  margin: 0px 0px 00px 0px;
-  
-  max-inline-size: 399px;
-  max-block-size: 100%;
-  
+  margin: 0px 0px 0px 0px;
+  inline-size: 399px;
+  block-size: 534px;
+  row-gap: 30px;
   padding-inline-end: 5px;
-  
   /*outline: solid 1px rgb(112, 233, 14);*/
 }
 
 .title {
-  display: inline-block;
-  margin-top: 0px;
-  padding-left: 0px;
-  font-family: 'Oswald';
+  display: block;
+  margin: 0px;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 75px;
   line-height: 94%;
   letter-spacing: 0px;
   text-transform: uppercase;
-  justify-self: start;
-  align-self: start;
-  max-width: 100%;
+  color: #fff;
 }
 
 .content__accent {
   color: rgba(84, 80, 80, 1);
 }
 
-.content__list-container + 
-.custom-scrollbar::-webkit-scrollbar +
-.custom-scrollbar::-webkit-scrollbar-track +
-.custom-scrollbar::-webkit-scrollbar-thumb +
-.custom-scrollbar::-webkit-scrollbar-button {
-  max-block-size: 298px;
-  overflow: scroll;
+.content__list-container {
+  block-size: 298px;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .content__list {
@@ -371,8 +367,6 @@ background: rgba(239, 12, 12, 0.919);
   padding: 0px;
   block-size: 298px;
   inline-size: 399px;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 /*ТЕМПЛЕЙТЫ*/
@@ -409,6 +403,8 @@ background: rgba(239, 12, 12, 0.919);
 
 .content__list-item {
   display: inline-block;
+  inline-size: 390px;
+  block-size: 103px;
   margin:0;
   padding: 0;
   align-items: center;
@@ -423,7 +419,7 @@ background: rgba(239, 12, 12, 0.919);
   display: block;
   align-content: flex-start;
   justify-content: flex-start;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
@@ -431,6 +427,11 @@ background: rgba(239, 12, 12, 0.919);
   letter-spacing: 0px;
   color: rgba(255, 255, 255, 1);
   text-decoration: none;
+
+}
+
+.content__card-link:focus {
+  outline: none;
 }
 
 .content__card-link:focus-visible {
@@ -449,55 +450,54 @@ background: rgba(239, 12, 12, 0.919);
 
 .content__video-card {
   display: grid;
-  grid-template-rows: max-content;
-  max-block-size: 103px;
-  min-inline-size: 390px;
+  block-size: 103px;
+  inline-size: 390px;
+  row-gap: 30px;
   grid-template-columns: 1fr 1fr;
   justify-items: start;
   align-items: start;
-  
+  padding-top: 26px;
 }
 
 .content__video-card-description-container {
-  display: block;
+  /*display: block;
   object-fit: cover;
   align-items: start;
   justify-items: start;
   margin: 0;
-  padding: 0;
+  padding: 0;*/
+  gap: 30px;
+  padding-inline-start: 2px;
 }
 
 .content__video-card-title {
-  display: inline-flex;
+  /*display: inline-flex;
   flex-direction: row;
   align-items: start;
   justify-self: start;
-  flex-wrap: wrap;
-  text-align: start;
-  font-family: 'Oswald';
+  flex-wrap: wrap;*/
+  
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 30px;
   line-height: 100%;
   letter-spacing: 0px;
   text-transform: uppercase;
-  text-decoration: none;
-  list-style-type: none;
   color:rgba(255, 255, 255, 1);
-  text-overflow: ellipsis;
 }
 
 .content__video-card-description {
-  display: inline-flex;
+  /*display: inline-flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap;*/
   text-align: start;
-  font-family: 'Fira Sans Condensed' sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
   line-height: 16.2px;
-  letter-spacing: 0%;
+  letter-spacing: 0px;
   color:rgba(255, 255, 255, 1);
 }
 
@@ -510,14 +510,13 @@ background: rgba(239, 12, 12, 0.919);
 
 .more-button-template {
   inline-size: 100%;
+  margin-inline-end: 2px;
 }
 
-.more-button-template +  .visually-hidden {
-  inline-size: 100%;
-}
+
 
 .error-template {
-  font-family: 'Oswald';
+  font-family: "Oswald" , sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 30px;
