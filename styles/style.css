@@ -381,7 +381,7 @@ ol {
   gap: 30px;
   margin: 0;
   padding: 0;
-  block-size: 298px;
+  /*block-size: 298px;*/
   inline-size: 399px;
 }
 
@@ -422,7 +422,7 @@ ol {
   block-size: 103px;
   margin:0;
   padding: 0;
-  row-gap: 30px;
+  
   align-items: center;
   justify-content: center;
 }
@@ -494,6 +494,10 @@ ol {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   
 }
 
@@ -513,6 +517,7 @@ ol {
   text-transform: uppercase;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
   color:rgba(255, 255, 255, 1);
   margin: 0px 0px 6px 0px;
   padding: 0;
@@ -530,8 +535,10 @@ ol {
   line-height: 16.2px;
   letter-spacing: 0px;
   color:rgba(255, 255, 255, 1);
+  text-decoration: none;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
   margin: 0;
   padding: 0;
   line-clamp: 3;
@@ -554,6 +561,7 @@ ol {
   align-self: flex-end;
   justify-content: end;
   padding-bottom: 2px;
+  margin-bottom: 2px;
   width: 100%;
 }
 
