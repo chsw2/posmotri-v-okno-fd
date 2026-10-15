@@ -22,7 +22,7 @@ html {
   font-size: 18px;
   color: #fff;
   background-color: rgba (27, 25, 25, 1);
-  outline: 1px solid white;
+  /*outline: 1px solid white;*/
 };
 
 h1,
@@ -74,12 +74,10 @@ ol {
   flex-direction: row;
   margin: 133px 30px;
   padding: 0;
-  align-content: flex-end;
   justify-content: space-between;
-  /*padding: 76px 2px 70px 0px;*/
-  gap: 28px;
+  gap: 30px;
   block-size: 534px;
-  border: solid 1px white;
+  /*outline: solid 1px white;*/
 }
 
 .result {
@@ -109,7 +107,6 @@ ol {
   max-inline-size: 711px;
   max-block-size: 386px;
   justify-content: space-between;
-  align-items: start;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -292,7 +289,6 @@ ol {
   cursor: pointer;
   margin: 0;
   padding: 0;
-  /*padding: 6px 73.5px;*/
 }
 
 .button:hover {
@@ -333,14 +329,15 @@ ol {
 /*вывод списка видео*/
 .content__details {
   block-size: 100%;
+  inline-size: 399px;
   display: flex;
   flex-direction: column;
   align-self: flex-start;
   justify-self: flex-start;
   margin: 0;
-  padding: 0;  
+  padding: 0 0 0 2px;  
   gap: 26px;
-  outline: solid 1px rgb(112, 233, 14);
+  /*outline: solid 1px rgb(112, 233, 14);*/
 }
 
 .title {
@@ -381,7 +378,6 @@ ol {
   gap: 30px;
   margin: 0;
   padding: 0;
-  /*block-size: 298px;*/
   inline-size: 399px;
 }
 
@@ -465,49 +461,32 @@ ol {
 }
 
 .content__video-card {
-  /*display: grid;
-  block-size: 103px;
-  inline-size: 390px;
-  row-gap: 30px;
-  grid-template-columns: 1fr 1fr;
-  justify-items: flex-start;
-  align-items: flex-start;
-  padding-top: 26px;*/
   display: flex;
   justify-content: left;
   block-size: 103px;
+  inline-size: 390px;
 }
 
 .content__video-card-description-container {
-  /*display: block;
-  object-fit: cover;
-  align-items: start;
-  justify-items: start;
-  margin: 0;
-  padding: 0;
-  content: "";
-  padding-inline-start: 2px;*/
-  display: inline-block;
+  display: block;
+  max-block-size: 190px;
   align-self: start;
   justify-self: start;
   flex-grow: 1;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 0;
   padding: 0;
-  text-transform: uppercase;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  padding-inline-start: 2px;
+  gap: 6px;
   
 }
 
 .content__video-card-title {
-  /*display: inline-flex;
-  flex-direction: row;
-  align-items: start;
-  justify-self: start;
-  flex-wrap: wrap;*/
-  
+  display: block;
+  inline-size: 190px;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -520,13 +499,13 @@ ol {
   white-space: nowrap;
   color:rgba(255, 255, 255, 1);
   margin: 0px 0px 6px 0px;
-  padding: 0;
+  padding: 4px 1px 6px 1px;
+  background-color: transparent;
 }
 
 .content__video-card-description {
-  /*display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;*/
+  display: block;
+  inline-size: 190px;
   text-align: start;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
@@ -541,26 +520,25 @@ ol {
   white-space: nowrap;
   margin: 0;
   padding: 0;
-  line-clamp: 3;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  background-color: transparent;
+  
 }
 
 .content__video-card-thumbnail {
-  display: block;
-  block-size: 103px;
-  justify-self: end;
   inline-size: 194px;
+  block-size: 103px;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  
 }
 
 .more-button {
   display: block;
   background-color: transparent;
   align-self: flex-end;
-  justify-content: end;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
+  margin-top: 30px;
   margin-bottom: 2px;
   width: 100%;
 }
