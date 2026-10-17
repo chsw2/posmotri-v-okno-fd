@@ -104,15 +104,16 @@ ol {
 .search-form {
   display: flex;
   max-inline-size: 711px;
-  max-block-size: 386px;
+  max-block-size: fit-content;
   justify-content: space-between;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
-  line-height: 0.1;
+  line-height: 1;
   letter-spacing: 0px;
   gap: 40px;
+  padding-top: 5px;
   margin: 0px;
   padding: 0px;
 }
@@ -122,6 +123,7 @@ ol {
 }
 
 .search-form__fieldset {
+  appearance: none;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -130,12 +132,12 @@ ol {
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
-  line-height: 0.1;
+  line-height: 1;
   letter-spacing: 0px;
   color: rgba(255, 255, 255, 1);
   gap: 5px;
-  margin: 0px;
-  padding: 0px;
+  margin: 0px 0px 0px 0px;
+  padding: 1px 0px 0px 0px;
   /*border: 1px solid rgb(112, 233, 14);*/
 }
 
@@ -144,11 +146,11 @@ ol {
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
-  line-height: 100%;
+  line-height: 1;
   letter-spacing: 0px;
   color: rgba(255, 255, 255, 1);
   margin: 0;
-  padding: 0;
+  padding-bottom: 5px;
   }
 
 .search-form__label {
@@ -181,7 +183,7 @@ ol {
   align-items: center;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
-  line-height: 0.1;
+  line-height: 1;
   font-size: 18px;
   color: #fff;
   background-color: transparent;
@@ -191,6 +193,8 @@ ol {
   border-inline-end: none;
   cursor: pointer;
   padding-block-end: 2px;
+  padding: 4px 0px 0px 0px;
+  margin: 0px;
 }
 
 .search-form__textfield:focus-visible {
@@ -233,6 +237,7 @@ ol {
   block-size: 19px;
   inline-size: 19px;
   border: 1px solid #fff;
+  margin: 1,5px;
 }
 
 .search-form__pseudo-checkbox::after {
@@ -282,7 +287,7 @@ ol {
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  line-height: 0.1;
+  line-height: 1;
   letter-spacing: 0px;
   text-align: center;
   cursor: pointer;
@@ -321,19 +326,23 @@ ol {
   background-color: rgba(84, 80, 80, 1);
 }
 
-.search-form__submit-button:hover:not(.search-form__label:has(.search-form__textfield)), .button:hover {
+.search-form__submit-button:hover:not(.search-form__label:has(.search-form__textfield)) {
   text-decoration: underline;
+}
+
+.button:hover {
+    text-decoration: underline;
 }
 
 /*вывод списка видео*/
 .content__details {
   block-size: 100%;
-  inline-size: 399px;
+  inline-size: fit-content;
   display: flex;
   flex-direction: column;
   align-self: flex-start;
   justify-self: flex-start;
-  margin: 0;
+  margin: 0px;
   padding: 0 0 0 2px;  
   gap: 26px;
   /*outline: solid 1px rgb(112, 233, 14);*/
@@ -365,8 +374,9 @@ ol {
 
 .content__list-container {
   block-size: 298px;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  inline-size: fit-content;
+  overflow: auto;
+  padding: 1px;
 }
 
 .content__list {
@@ -376,7 +386,7 @@ ol {
   flex-grow: 1;
   gap: 30px;
   margin: 0;
-  padding: 0;
+  padding: 2px 0px;
   inline-size: 399px;
 }
 
@@ -429,12 +439,12 @@ ol {
 .content__card-link {
   display: block;
   align-content: flex-start;
-  justify-content: flex-start;*/
+  justify-content: flex-start;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
-  line-height: 16.2px;
+  line-height: 1.5;
   letter-spacing: 0px;
   margin: 0;
   padding: 0;
@@ -461,22 +471,21 @@ ol {
 
 .content__card-link_current {
   background: rgba(84, 80, 80, 1);
-  outline: 1px solid #fff;
-  outline-offset: -2px;
 }
 
 .content__card-link_current:focus {
-  background: rgba(84, 80, 80, 1);
   outline: 1px solid #fff;
-  outline-offset: -2px;
+  outline-offset: 1px;
 }
 
 
 .content__video-card {
   display: flex;
   justify-content: left;
-  block-size: 103px;
+  block-size: fit-content;
   inline-size: 390px;
+  margin: 0;
+  padding: 0;
 }
 
 .content__video-card-description-container {
@@ -486,13 +495,13 @@ ol {
   justify-self: start;
   flex-grow: 1;
   flex-wrap: nowrap;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  padding-inline-start: 2px;
-  gap: 6px;
+  /*padding-inline-start: 2px;
+  gap: 6px;*/
   
 }
 
@@ -503,15 +512,15 @@ ol {
   font-weight: 700;
   font-style: normal;
   font-size: 30px;
-  line-height: 0.1;
+  line-height: 1;
   letter-spacing: 0px;
   text-transform: uppercase;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   color:rgba(255, 255, 255, 1);
-  margin: 0px 0px 6px 0px;
-  padding: 2px 1px 6px 1px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
   background-color: transparent;
 }
 
@@ -523,7 +532,7 @@ ol {
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
-  line-height: 16.2px;
+  line-height: 1.5;
   letter-spacing: 0px;
   color:rgba(255, 255, 255, 1);
   text-decoration: none;
@@ -531,17 +540,18 @@ ol {
   overflow: hidden;
   white-space: nowrap;
   margin: 0;
-  padding: 0px 1px 4px 1px;
+  padding: 0px 0px 0px 0px;
   line-clamp: 1;
   background-color: transparent;
-  
 }
 
 .content__video-card-thumbnail {
   inline-size: 194px;
   block-size: 103px;
-  background-position: center;
-  background-size: cover;
+  object-fit: cover;
+  object-position: center;
+  /*background-position: center;
+  background-size: cover;*/
   
 }
 
@@ -549,7 +559,7 @@ ol {
   display: block;
   background-color: transparent;
   align-self: flex-end;
-  padding-bottom: 4px;
+  padding: 6px 142px;
   margin-top: 30px;
   margin-bottom: 2px;
   width: 100%;
@@ -561,7 +571,7 @@ ol {
   font-weight: 700;
   font-style: normal;
   font-size: 30px;
-  line-height: 0.11000000000000001;
+  line-height: 1.1000000000000001;
   letter-spacing: 0%;
   text-align: center;
   justify-content: start;
