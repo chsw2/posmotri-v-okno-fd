@@ -459,6 +459,19 @@ ol {
   background-color: rgba(84, 80, 80, 1);
 }
 
+.content__card-link_current {
+  background: rgba(84, 80, 80, 1);
+  outline: 1px solid #fff;
+  outline-offset: -2px;
+}
+
+.content__card-link_current:focus {
+  background: rgba(84, 80, 80, 1);
+  outline: 1px solid #fff;
+  outline-offset: -2px;
+}
+
+
 .content__video-card {
   display: flex;
   justify-content: left;
