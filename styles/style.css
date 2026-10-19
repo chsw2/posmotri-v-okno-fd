@@ -5,19 +5,26 @@
 }
 
 html {
+  display: flex;
   block-size: 100%;
   background-color: rgba(27, 25, 25, 1);
+  min-height: 100vh;
+  min-width: 100vh;
+  margin: 0;
+  place-items: center;
 }
+
 
 .page {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  place-items: center;
+  vertical-align: center;
   inline-size: 1200px;
   block-size: 800px;
   margin: auto;
   padding: 30px;
+  box-sizing: border-box;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   color: #fff;
@@ -434,13 +441,12 @@ ol {
   block-size: 103px;
   margin: 0;
   padding: 0;
-  
   align-items: center;
   justify-content: center;
 }
 
-.content__list-item:not(:last-child) {
-  padding-block-end: 32px;
+.content__list-item:last-child {
+  margin-bottom: 30px;
 }
 
 .content__card-link {
