@@ -19,11 +19,11 @@ html {
   display: flex;
   flex-direction: row;
   place-items: center;
-  vertical-align: center;
   inline-size: 1200px;
   block-size: 800px;
-  margin: auto;
-  padding: auto;
+  margin: 0;
+  padding: 0 30px;
+  gap: 30px;
   box-sizing: border-box;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
@@ -66,11 +66,13 @@ ol {
 .content {
   display: flex;
   flex-direction: row;
-  margin: 133px 30px;
-  padding: 0;
-  justify-content: space-between;
-  gap: 30px;
+  /*margin: 133px 30px;*/
+  /*margin: 0 30px;*/
+  /*gap: 30px;*/
+  /*padding: 0 30px;*/
+  align-items:baseline;
   block-size: 534px;
+  /*inline-size: 1140px;*/
   /*outline: solid 1px white;*/
 }
 
@@ -333,12 +335,12 @@ ol {
 /*вывод списка видео*/
 .content__details {
   block-size: 100%;
-  inline-size: fit-content;
+  inline-size: 399px;
   display: flex;
   flex-direction: column;
   align-self: flex-start;
   justify-self: flex-start;
-  margin: 0px;
+
   padding: 0px;  
   gap: 26px;
   /*outline: solid 1px rgb(112, 233, 14);*/
