@@ -1,3 +1,4 @@
+/*21-10-26*/
 *,
 *::before,
 *::after {
@@ -8,8 +9,7 @@ html {
   display: flex;
   block-size: 100%;
   background-color: rgba(27, 25, 25, 1);
-  min-block-size: 100vh;
-  margin: 0;
+  margin: auto;
   justify-items: center;
   align-items: center;
 }
@@ -23,7 +23,7 @@ html {
   inline-size: 1200px;
   block-size: 800px;
   margin: auto;
-  padding: 0;
+  padding: auto;
   box-sizing: border-box;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
