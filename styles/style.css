@@ -1,4 +1,4 @@
-/*21-10-26*/
+/*22-10-26*/
 *,
 *::before,
 *::after {
@@ -6,28 +6,28 @@
 }
 
 html {
-  display: flex;
+  display: block;
   block-size: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+  place-items: center;
   background-color: rgba(27, 25, 25, 1);
-  margin: auto;
-  justify-items: center;
-  align-items: center;
 }
 
 
 .page {
   display: flex;
-  flex-direction: row;
-  place-items: center;
-  inline-size: 1200px;
-  block-size: 800px;
-  margin: 0;
-  padding: 0 30px;
-  gap: 30px;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  block-size: 100%;
+  min-width: 1200px;
   box-sizing: border-box;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   color: #fff;
+  padding: 0;
+  margin: 0;
   /*outline: 1px solid white;*/
 }
 
@@ -66,13 +66,9 @@ ol {
 .content {
   display: flex;
   flex-direction: row;
-  /*margin: 133px 30px;*/
-  /*margin: 0 30px;*/
-  /*gap: 30px;*/
-  /*padding: 0 30px;*/
-  align-items:baseline;
+  align-content:  center;
+  justify-content: center;
   block-size: 534px;
-  /*inline-size: 1140px;*/
   /*outline: solid 1px white;*/
 }
 
@@ -135,7 +131,7 @@ ol {
   gap: 5px;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
-  /*border: 1px solid rgb(112, 233, 14);*/
+  /*outline: 1px solid rgb(112, 233, 14);*/
 }
 
 .search-form__fieldset-title {
@@ -168,7 +164,7 @@ ol {
   margin: 0;
   padding: 0;
   padding-inline-start: 2px;
-  border: #FFFFFF;
+  outline: #FFFFFF;
 }
 
 .search-form__label-text + .visually-hidden {
@@ -340,7 +336,7 @@ ol {
   flex-direction: column;
   align-self: flex-start;
   justify-self: flex-start;
-
+  margin-left: 30px;
   padding: 0px;  
   gap: 26px;
   /*outline: solid 1px rgb(112, 233, 14);*/
