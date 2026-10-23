@@ -1,4 +1,4 @@
-/*22-10-26 3 error correct*/
+/*23-10-26 1 error correct*/
 *,
 *::before,
 *::after {
@@ -546,7 +546,7 @@ ol {
   display: flex;
   background-color: transparent;
   padding: 6px 0px;
-  margin: 2px 2px 2px 2px;
+  margin: 30px 2px 8px 2px;
   max-inline-size: 390px;
 }
 
